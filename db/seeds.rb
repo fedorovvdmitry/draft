@@ -9,6 +9,10 @@ require 'faker'
   )
 end
 
+User.find_or_create_by!(email: "admin@example.com") do |u|
+  u.password = "password123"
+end
+
 5.times do
   Category.create!(
     name: Faker::Book.genre
