@@ -1,29 +1,73 @@
-<div class="flex flex-col items-center justify-center text-center px-6 py-20">
-  <!-- Хэдер -->
-  <nav class="flex space-x-10 mb-16 text-lg font-inter text-[#4D4D4D]">
-    <a href="/" class="hover:text-[#19AD9E]">Главная</a>
-    <a href="/about" class="hover:text-[#19AD9E]">О нас</a>
-    <a href="/service" class="hover:text-[#19AD9E]">Сервис</a>
-    <a href="/media" class="hover:text-[#19AD9E]">Медиа</a>
-    <a href="/contacts" class="hover:text-[#19AD9E]">Контакты</a>
+<main class="flex flex-col items-center text-center">
+
+  <nav class="flex space-x-8 text-lg font-light mt-6">
+    <a href="#">Главная</a>
+    <a href="#">О нас</a>
+    <a href="#">Сервис</a>
+    <a href="#">Медиа</a>
+    <a href="#">Контакты</a>
   </nav>
 
-  <!-- Заголовок -->
-  <h1 class="font-[Lighthaus] text-[80px] font-normal uppercase leading-none text-center text-[#29323C] max-w-5xl">
-    Дизайн — это не декорация,<br>а язык смысла
-  </h1>
+  <section class="mt-12 max-w-5xl">
+    <h1 class="text-5xl font-bold leading-tight">
+      Дизайн — это не декорация,<br />
+      а язык смысла
+    </h1>
+    <p class="mt-6 text-lg">
+      Мы показываем, как визуальные решения влияют на доверие и рост бизнеса.
+      Здесь — кейсы, разборы и наблюдения изнутри дизайн-студии.
+    </p>
+    <a href="#"
+       class="mt-8 inline-block bg-teal-400 text-white px-8 py-4 rounded-full">
+      Обсудить проект
+    </a>
+  </section>
 
-  <!-- Подзаголовок -->
-  <p class="mt-8 font-inter text-[20px] font-normal leading-[140%] tracking-tight text-center text-[#4D4D4D] max-w-3xl">
-    Мы показываем, как визуальные решения влияют на доверие и рост бизнеса. 
-    Здесь — кейсы, разборы и наблюдения изнутри дизайн-студии.
-  </p>
+  <section class="mt-20 max-w-5xl">
+    <h2 class="text-4xl font-bold mb-12">
+      Мы объясняем,<br />как работает дизайн
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="bg-orange-400 text-white p-6 rounded-lg">
+        Реальные истории брендов, которые выросли после редизайна
+      </div>
+      <div class="bg-green-400 text-white p-6 rounded-lg">
+        Почему одно решение работает, а другое нет
+      </div>
+      <div class="bg-blue-400 text-white p-6 rounded-lg">
+        Короткие заметки и тренды в визуальном мышлении
+      </div>
+      <div class="bg-pink-400 text-white p-6 rounded-lg">
+        И немного сплетен))
+      </div>
+    </div>
+  </section>
 
-  <!-- Кнопка -->
-  <a href="#contact" 
-     class="mt-10 inline-block rounded-[100px] bg-[#19AD9E] px-8 py-4 
-            font-inter font-semibold text-[16px] text-white hover:bg-[#17a191] transition">
-    Обсудить проект
-  </a>
-</div>
+  <section class="mt-20 max-w-4xl text-left">
+    <h2 class="text-4xl font-bold mb-6">Подписка, которая имеет смысл</h2>
+    <form class="flex space-x-4">
+      <input type="email" placeholder="Ваша почта"
+             class="flex-1 border px-4 py-2 rounded-full" />
+      <button type="submit"
+              class="bg-teal-400 text-white px-6 py-2 rounded-full">
+        Подписаться на обновления
+      </button>
+    </form>
+  </section>
 
+  <footer class="bg-black text-white mt-20 w-full py-12 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between">
+      <div>
+        <h3 class="text-2xl font-bold mb-4">
+          Будьте первыми, кто узнаёт, как визуальные решения работают в бизнесе
+        </h3>
+      </div>
+      <div class="flex space-x-6 mt-6 md:mt-0">
+        <a href="#">Behance</a>
+        <a href="#">YouTube</a>
+        <a href="#">VK</a>
+        <a href="#">Telegram</a>
+      </div>
+    </div>
+  </footer>
+</main>
