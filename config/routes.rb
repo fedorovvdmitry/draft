@@ -9,5 +9,14 @@ Rails.application.routes.draw do
 
   # healthcheck
   get "up" => "rails/health#show", as: :rails_health_check
-end
 
+  # telegram mini app api
+  namespace :tg do
+    namespace :api do
+      get "cards", to: "cards#index"
+      get "glossary", to: "glossary#index"
+      get "orders", to: "orders#index"
+      post "orders", to: "orders#create"
+    end
+  end
+end
