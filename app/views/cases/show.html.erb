@@ -1,0 +1,85 @@
+<main>
+    <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="/">SMYSL</a>
+
+      <nav class="topnav" aria-label="Основная навигация">
+        <a class="topnav__link" href="/">Главная</a>
+        <a class="topnav__link" href="/articles">Статьи</a>
+        <a class="topnav__link topnav__link--active" href="/cases">Кейсы</a>
+        <a class="topnav__link" href="/process">Процесс и батлы</a>
+        <a class="topnav__link" href="/about">О нас</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="cases-list">
+        <!-- Case 1 -->
+        <article class="case-card">
+          <a class="case-card__cover case-card__cover--blue" href="/cases/1" aria-label="Открыть кейс">
+            <span class="case-card__cover-icon" aria-hidden="true">
+              <svg width="52" height="52" viewBox="0 0 24 24" fill="none">
+                <path d="M4 19V5" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M10 19V9" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M16 19V3" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M3 19h18" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </span>
+          </a>
+
+          <div class="case-card__body">
+            <div class="case-card__kpi">+43% конверсия</div>
+
+            <h3 class="case-card__title">
+              <a href="/cases/1">Редизайн B2B SaaS: +43% конверсии через смысл, а не красоту</a>
+            </h3>
+
+            <p class="case-card__text">
+              Заказчик хотел “современный дизайн”. Мы спросили “зачем?” и нашли 3 реальные проблемы, которые убивали конверсию.
+              Решили их — конверсия выросла на 43%.
+            </p>
+
+            <div class="case-card__tags">
+              <span class="chip">b2b</span>
+              <span class="chip">конверсия</span>
+              <span class="chip">смысл</span>
+            </div>
+
+            <div class="case-card__bottom">
+              <div class="case-card__stats">
+                <span class="stat stat--muted">
+                  <span class="stat__icon" aria-hidden="true">👁️</span>
+                  15 234
+                </span>
+                <span class="stat stat--muted">
+                  <span class="stat__icon" aria-hidden="true">♡</span>
+                  1089
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+      <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="brand brand--muted">
+          <span class="brand__logo" aria-hidden="true"></span>
+          <span class="brand__name">SMYSL</span>
+        </div>
+        <div class="footer__copy">© <span><%= Time.current.year %></span> SMYSL</div>
+      </div>
+
+      <div class="footer__right">
+        <a class="footer__link" href="/privacy">Политика</a>
+        <a class="footer__link" href="/terms">Условия</a>
+        <a class="footer__link" href="/contacts">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+</main>

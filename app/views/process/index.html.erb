@@ -1,0 +1,160 @@
+<main>
+    <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="/">SMYSL</a>
+
+      <nav class="topnav" aria-label="Основная навигация">
+        <a class="topnav__link" href="/">Главная</a>
+        <a class="topnav__link" href="/articles">Статьи</a>
+        <a class="topnav__link" href="/cases">Кейсы</a>
+        <a class="topnav__link topnav__link--active" href="/process">Процесс и батлы</a>
+        <a class="topnav__link" href="/about">О нас</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <div class="container process-page__inner">
+
+    <header class="process-head">
+      <h1 class="process-title">Процесс и батлы</h1>
+      <p class="process-subtitle">Смотрите, как мыслят дизайнеры: записи работы и live-соревнования</p>
+    </header>
+
+    <section class="process-section">
+      <h2 class="process-section__title">Записи процесса работы</h2>
+
+      <div class="process-list">
+
+        <!-- item 1 -->
+        <article class="process-card">
+          <a class="process-card__cover process-card__cover--navy" href="/process/1" aria-label="Открыть процесс">
+            <span class="process-card__play" aria-hidden="true">
+              <svg width="58" height="58" viewBox="0 0 64 64" fill="none">
+                <path d="M26 20l20 12-20 12V20z" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="process-card__duration">2:34:15</span>
+          </a>
+
+          <div class="process-card__body">
+            <h3 class="process-card__title">
+              <a href="/process/1">Редизайн навигации e-commerce: логика вместо интуиции</a>
+            </h3>
+
+            <div class="process-card__meta">
+              <span class="meta">
+                <span class="meta__icon" aria-hidden="true">👤</span>
+                Анна Петрова
+              </span>
+              <span class="meta">
+                <span class="meta__icon" aria-hidden="true">👁️</span>
+                5 431
+              </span>
+            </div>
+
+            <div class="process-moments">
+              <div class="process-moments__title">Ключевые моменты:</div>
+
+              <ul class="moments-list">
+                <li class="moments-item">
+                  <span class="moments-time">00:12</span>
+                  <span class="moments-text">Анализ проблем: где пользователи теряются</span>
+                </li>
+                <li class="moments-item">
+                  <span class="moments-time">00:45</span>
+                  <span class="moments-text">Исследование конкурентов (что работает, что нет)</span>
+                </li>
+                <li class="moments-item">
+                  <span class="moments-time">01:15</span>
+                  <span class="moments-text">Построение информационной архитектуры</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="process-tags">
+              <span class="chip">навигация</span>
+              <span class="chip">e-commerce</span>
+              <span class="chip">логика</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- item 2 -->
+        <article class="process-card">
+          <a class="process-card__cover process-card__cover--blue" href="/process/2" aria-label="Открыть процесс">
+            <span class="process-card__play" aria-hidden="true">
+              <svg width="58" height="58" viewBox="0 0 64 64" fill="none">
+                <path d="M26 20l20 12-20 12V20z" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="process-card__duration">8:12:30</span>
+          </a>
+
+          <div class="process-card__body">
+            <h3 class="process-card__title">
+              <a href="/process/2">Дизайн-система с нуля: функция, а не красота</a>
+            </h3>
+
+            <div class="process-card__meta">
+              <span class="meta">
+                <span class="meta__icon" aria-hidden="true">👤</span>
+                Дмитрий Соколов
+              </span>
+              <span class="meta">
+                <span class="meta__icon" aria-hidden="true">👁️</span>
+                7 892
+              </span>
+            </div>
+
+            <div class="process-moments">
+              <div class="process-moments__title">Ключевые моменты:</div>
+
+              <ul class="moments-list">
+                <li class="moments-item">
+                  <span class="moments-time">00:30</span>
+                  <span class="moments-text">Аудит существующих компонентов</span>
+                </li>
+                <li class="moments-item">
+                  <span class="moments-time">02:00</span>
+                  <span class="moments-text">Токены и переменные для масштабируемости</span>
+                </li>
+                <li class="moments-item">
+                  <span class="moments-time">04:30</span>
+                  <span class="moments-text">Базовые компоненты: кнопки, формы, карточки</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="process-tags">
+              <span class="chip">дизайн-система</span>
+              <span class="chip">компоненты</span>
+              <span class="chip">функция</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </div>
+
+<footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="brand brand--muted">
+          <span class="brand__logo" aria-hidden="true"></span>
+          <span class="brand__name">SMYSL</span>
+        </div>
+        <div class="footer__copy">© <span><%= Time.current.year %></span> SMYSL</div>
+      </div>
+
+      <div class="footer__right">
+        <a class="footer__link" href="/privacy">Политика</a>
+        <a class="footer__link" href="/terms">Условия</a>
+        <a class="footer__link" href="/contacts">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+</main>

@@ -1,74 +1,147 @@
-<main class="flex flex-col items-center text-center">
+<main>
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="/">SMYSL</a>
 
-  <nav class="flex space-x-8 text-lg font-light mt-6">
-    <a href="/">Главная</a>
-    <a href="/about">О нас</a>
-    <a href="#">Сервис</a>
-    <a href="#">Медиа</a>
-    <a href="#">Контакты</a>
-  </nav>
-
-  <section class="mt-12 max-w-5xl">
-    <h1 class="text-5xl font-bold leading-tight">
-      Мы — студия,<br />которая думает дизайном
-    </h1>
-    <p class="mt-6 text-lg">
-      Работаем штучно, внимательно и с вовлечением. Для нас важно не просто
-      «сделать красиво», а найти визуальную форму для смысла бизнеса
-    </p>
-    <a href="#"
-       class="mt-8 inline-block bg-pink-500 text-white px-8 py-4 rounded-full">
-      Обсудить проект
-    </a>
-  </section>
-
-  <section class="bg-blue-400 text-black w-full mt-20 py-16 px-6">
-    <div class="max-w-3xl mx-auto text-lg">
-      Дизайн создаёт доверие, формирует восприятие и влияет на решения.
-      Мы подходим к каждому проекту как к диалогу:
-      сначала — понять, потом — показать.
+      <nav class="topnav" aria-label="Основная навигация">
+        <a class="topnav__link" href="/">Главная</a>
+        <a class="topnav__link" href="/articles">Статьи</a>
+        <a class="topnav__link" href="/cases">Кейсы</a>
+        <a class="topnav__link" href="/process">Процесс и батлы</a>
+        <a class="topnav__link topnav__link--active" href="/about">О нас</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section class="mt-20 max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    <div>
-      <img src="/assets/dog-pink.jpg" alt="Дизайн-агенты" class="rounded-lg shadow-lg" />
+  <div class="container page__inner">
+    <div class="page-head">
+      <h1 class="page-title">О нас</h1>
     </div>
-    <div class="text-left">
-      <h2 class="text-4xl font-bold mb-6">Кто мы?</h2>
-      <p class="text-lg leading-relaxed">
-        Мы — бутик-студия, где дизайн = мышление.
-        Работаем с предпринимателями и брендами из 10+ стран.
-        Делаем сайты, брендинг и упаковку, которые формируют восприятие и доверие.
-        Для нас визуал — это способ говорить с аудиторией, а не просто «красиво».
-      </p>
-    </div>
-  </section>
 
-  <footer class="bg-black text-white mt-20 w-full py-12 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-2xl font-bold mb-8">
-        Будьте первыми, кто узнаёт, как визуальные решения работают в бизнесе
-      </h3>
-      <div class="flex flex-col md:flex-row justify-between">
-        <div>
-          <p class="mb-4">По вопросам сотрудничества</p>
-          <p>telegram @kateti_katrin</p>
+    <!-- intro -->
+    <section class="about-intro">
+      <h2 class="about-intro__title">Мы находим смысл в дизайне</h2>
+
+      <div class="about-intro__text">
+        <p>
+          SMYSL — про функцию, а не про форму. Критикуем тренды ради трендов и показываем,
+          что действительно работает на цифрах.
+        </p>
+        <p>
+          Переводим визуальный язык в язык бизнеса — чтобы решения принимались осознанно, а
+          дизайн приносил измеримый результат.
+        </p>
+      </div>
+    </section>
+
+    <!-- values -->
+    <section class="values">
+      <h2 class="section-title">Наши ценности</h2>
+
+      <div class="values-list">
+        <article class="value-card">
+          <h3 class="value-card__title">Смысл превыше формы</h3>
+          <p class="value-card__text">
+            Красота без функции — просто декор. Каждый элемент должен иметь обоснование и работать на результат.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <h3 class="value-card__title">Честность и прозрачность</h3>
+          <p class="value-card__text">
+            Показываем реальные кейсы, процесс работы, ошибки и их исправление. Без глянца и постановочных историй успеха.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <h3 class="value-card__title">Критическое мышление</h3>
+          <p class="value-card__text">
+            Говорим, когда тренд не несёт смысла — даже если мнение непопулярно. Критикуем конструктивно, без снобизма.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <h3 class="value-card__title">Контекстность</h3>
+          <p class="value-card__text">
+            Всегда учитываем специфику ниши и реальность конкретного бизнеса. Нет универсальных решений — есть решения под задачу.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- work with clients -->
+    <section class="clients-card">
+      <div class="clients-card__inner">
+        <h2 class="clients-card__title">Работаем с заказчиками</h2>
+
+        <p class="clients-card__text">
+          Мы — не только медиа. Работаем с компаниями: аудитим дизайн, консультируем по выбору подрядчиков,
+          разрабатываем стратегию.
+        </p>
+
+        <h3 class="clients-card__sub">Что мы предлагаем:</h3>
+
+        <ul class="clients-list">
+          <li class="clients-list__item">
+            <span class="clients-list__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="9" stroke="#22c55e" stroke-width="2"/>
+                <path d="M8 12.3l2.2 2.2L16.5 8.4" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="clients-list__text">Аудит существующих дизайн-решений с конкретными рекомендациями</span>
+          </li>
+
+          <li class="clients-list__item">
+            <span class="clients-list__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="9" stroke="#22c55e" stroke-width="2"/>
+                <path d="M8 12.3l2.2 2.2L16.5 8.4" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="clients-list__text">Консультации по выбору подрядчиков и постановке задач дизайнерам</span>
+          </li>
+
+          <li class="clients-list__item">
+            <span class="clients-list__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="9" stroke="#22c55e" stroke-width="2"/>
+                <path d="M8 12.3l2.2 2.2L16.5 8.4" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="clients-list__text">Разработка дизайн-стратегии с фокусом на бизнес-результат</span>
+          </li>
+        </ul>
+
+        <a class="clients-card__btn" href="/contact">
+          <span class="clients-card__btn-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M3 11l18-8-8 18-2-7-8-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M11 14l10-11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          Обсудить проект
+        </a>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="brand brand--muted">
+          <span class="brand__logo" aria-hidden="true"></span>
+          <span class="brand__name">SMYSL</span>
         </div>
-        <div>
-          <p class="mb-4">Документы</p>
-          <ul>
-            <li>Политика конфиденциальности</li>
-            <li>Пользовательское соглашение</li>
-            <li>Оферта</li>
-          </ul>
-        </div>
-        <div class="flex space-x-6 mt-6 md:mt-0">
-          <a href="#">Behance</a>
-          <a href="#">YouTube</a>
-          <a href="#">VK</a>
-          <a href="#">Telegram</a>
-        </div>
+        <div class="footer__copy">© <span><%= Time.current.year %></span> SMYSL</div>
+      </div>
+
+      <div class="footer__right">
+        <a class="footer__link" href="/privacy">Политика</a>
+        <a class="footer__link" href="/terms">Условия</a>
+        <a class="footer__link" href="/contacts">Контакты</a>
       </div>
     </div>
   </footer>
