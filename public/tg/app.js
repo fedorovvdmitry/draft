@@ -18,7 +18,6 @@
   const tabs = document.getElementById("tabs");
   let currentTab = "moodboard";
 
-  // кеш, чтобы не дергать API по кругу
   const state = {
     moodboardLoaded: false,
     glossaryLoaded: false,
@@ -27,8 +26,6 @@
 
   const cache = { orders: [], moodboard: [], glossary: []  };
 
-
-  // initial load
   showTab("moodboard");
 
   if (tabs) {
@@ -39,7 +36,6 @@
     });
   }
 
-  // lead btn
   const leadBtn = document.getElementById("leadBtn");
   if (leadBtn) {
     leadBtn.addEventListener("click", () => {
@@ -58,23 +54,19 @@
   function showTab(tab) {
     currentTab = tab;
 
-    // активный класс
     document.querySelectorAll(".tab[data-tab]").forEach((b) => {
       b.classList.toggle("active", b.dataset.tab === tab);
     });
 
-    // видимость секций
     grid.classList.toggle("is-hidden", tab !== "moodboard");
     glossaryEl.classList.toggle("is-hidden", tab !== "glossary");
     ordersEl.classList.toggle("is-hidden", tab !== "orders");
 
-    // загрузка данных по вкладке (1 раз)
     if (tab === "moodboard" && !state.moodboardLoaded) loadMoodboard();
     if (tab === "glossary" && !state.glossaryLoaded) loadGlossary();
     if (tab === "orders" && !state.ordersLoaded) loadOrders();
   }
 
-  // ===== Moodboard =====
   function loadMoodboard() {
     state.moodboardLoaded = true;
 

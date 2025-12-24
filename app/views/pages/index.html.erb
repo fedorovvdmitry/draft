@@ -1,72 +1,860 @@
-<main class="flex flex-col items-center text-center">
+<!-- app/views/home/index.html.erb -->
+<main class="page">
+  <!-- Header -->
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="logo" href="/">SMYSL</a>
 
-  <nav class="flex space-x-8 text-lg font-light mt-6">
-    <a href="#">Главная</a>
-    <a href="#">О нас</a>
-    <a href="#">Сервис</a>
-    <a href="#">Медиа</a>
-    <a href="#">Контакты</a>
-  </nav>
+    <nav class="topnav" aria-label="Основная навигация">
+      <a class="topnav__link topnav__link--active" href="/">Главная</a>
+      <a class="topnav__link" href="/articles">Статьи</a>
+      <a class="topnav__link" href="/cases">Кейсы</a>
+      <a class="topnav__link" href="/process">Процесс и батлы</a>
+      <a class="topnav__link" href="/about">О нас</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="mt-12 max-w-5xl">
-    <h1 class="text-5xl font-bold leading-tight">
-      Дизайн — это не декорация,<br />
-      а язык смысла
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero__inner">
+    <h1 class="hero__title">
+      Дизайн без смысла — <span class="hero__accent">деньги на ветер</span>
     </h1>
-    <p class="mt-6 text-lg">
-      Мы показываем, как визуальные решения влияют на доверие и рост бизнеса.
-      Здесь — кейсы, разборы и наблюдения изнутри дизайн-студии.
+
+    <p class="hero__subtitle">
+      Разбираем, что работает в дизайне, а что съедает бюджет впустую. Без хайпа и трендов ради тренда.
     </p>
-    <a href="#"
-       class="mt-8 inline-block bg-teal-400 text-white px-8 py-4 rounded-full">
-      Обсудить проект
-    </a>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="/articles">
+        Читать статьи <span class="btn__icon" aria-hidden="true">→</span>
+      </a>
+      <a class="btn btn--outline" href="/process">Смотреть процесс работы</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Why -->
+  <section class="about">
+  <div class="container about__inner">
+    <header class="about__head">
+      <h2 class="about__title">В чём SMYSL?</h2>
+      <p class="about__subtitle">
+        Медиа-сервис о дизайне, который работает
+      </p>
+    </header>
+
+    <div class="about__cards">
+      <!-- card 1 -->
+      <article class="about-card">
+        <div class="about-card__icon about-card__icon--blue">
+          <!-- иконка документ -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M20 2.66666H8.00004C7.2928 2.66666 6.61452 2.94761 6.11442 3.4477C5.61433 3.9478 5.33337 4.62608 5.33337 5.33332V26.6667C5.33337 27.3739 5.61433 28.0522 6.11442 28.5523C6.61452 29.0524 7.2928 29.3333 8.00004 29.3333H24C24.7073 29.3333 25.3856 29.0524 25.8857 28.5523C26.3858 28.0522 26.6667 27.3739 26.6667 26.6667V9.33332L20 2.66666Z" stroke="#4F46E5" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18.6666 2.66666V7.99999C18.6666 8.70723 18.9476 9.38551 19.4477 9.88561C19.9478 10.3857 20.626 10.6667 21.3333 10.6667H26.6666" stroke="#4F46E5" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.3333 12H10.6666" stroke="#4F46E5" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21.3333 17.3333H10.6666" stroke="#4F46E5" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21.3333 22.6667H10.6666" stroke="#4F46E5" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <h3 class="about-card__title">Читать критические разборы</h3>
+        <p class="about-card__text">
+          Разбираем модные дизайн-тренды и показываем, какие из них приносят результат,
+          а какие — просто красивая обёртка. С цифрами, примерами и логикой.
+        </p>
+
+        <a class="about-card__link" href="/articles">
+          Читать статьи →
+        </a>
+      </article>
+
+      <!-- card 2 -->
+      <article class="about-card">
+        <div class="about-card__icon about-card__icon--green">
+          <!-- иконка график -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M4 19V5" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M10 19V9" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M16 19V3" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M3 19h18" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+        </div>
+
+        <h3 class="about-card__title">Изучать кейсы с метриками</h3>
+        <p class="about-card__text">
+          Разбираем реальные проекты: показываем метрики до редизайна,
+          что изменили и какой результат получили. Каждое решение объясняем — почему так, а не иначе.
+        </p>
+
+        <a class="about-card__link" href="/cases">
+          Смотреть кейсы →
+        </a>
+      </article>
+
+      <!-- card 3 -->
+      <article class="about-card">
+        <div class="about-card__icon about-card__icon--violet">
+          <!-- иконка play -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M8 5l10 7-10 7V5z" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+        </div>
+
+        <h3 class="about-card__title">Смотреть, как мыслят дизайнеры</h3>
+        <p class="about-card__text">
+          Записи работы дизайнеров, live-батлы, разбор процесса от задачи до решения.
+          Показываем не только результат, но и логику решений.
+        </p>
+
+        <a class="about-card__link" href="/process">
+          Процесс и батлы →
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+  <section class="audit-block" id="audit">
+  <div class="container audit-block__inner">
+    <header class="audit-block__head">
+      <h2 class="audit-block__title">Как выглядит наш аудит</h2>
+      <p class="audit-block__subtitle">
+        Разбираем проект на экране, показываем проблемы, объясняем решения
+      </p>
+    </header>
+
+    <div class="audit-card">
+      <!-- video preview -->
+      <button class="audit-video" type="button" aria-label="Воспроизвести пример аудита">
+        <span class="audit-video__play" aria-hidden="true">
+          <svg width="100" height="100" viewBox="0 0 64 64" fill="none">
+            <path d="M26 20l20 12-20 12V20z" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+          </svg>
+        </span>
+
+        <div class="audit-video__badge audit-video__badge--left">
+          <div class="audit-video__badge-title">🎥 Пример аудита</div>
+          <div class="audit-video__badge-text">Разбор сайта компании-поставщика кормов для домашних животных</div>
+        </div>
+
+        <div class="audit-video__badge audit-video__badge--right">40:00</div>
+      </button>
+
+      <!-- body -->
+      <div class="audit-body">
+        <div class="audit-body__left">
+          <h3 class="audit-body__title">Что внутри:</h3>
+
+          <ul class="audit-list">
+            <li class="audit-list__item">
+              <span class="audit-list__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" stroke="#22c55e" stroke-width="2"/>
+                  <path d="M8 12.3l2.2 2.2L16.5 8.4" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div class="audit-list__content">
+                <div class="audit-list__title">Находим, где теряется конверсия</div>
+                <div class="audit-list__text">Анализируем поведение пользователей и точки отвала</div>
+              </div>
+            </li>
+
+            <li class="audit-list__item">
+              <span class="audit-list__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" stroke="#22c55e" stroke-width="2"/>
+                  <path d="M8 12.3l2.2 2.2L16.5 8.4" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div class="audit-list__content">
+                <div class="audit-list__title">Объясняем, почему это происходит</div>
+                <div class="audit-list__text">Разбираем психологию и логику каждой проблемы</div>
+              </div>
+            </li>
+
+            <li class="audit-list__item">
+              <span class="audit-list__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" stroke="#22c55e" stroke-width="2"/>
+                  <path d="M8 12.3l2.2 2.2L16.5 8.4" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div class="audit-list__content">
+                <div class="audit-list__title">Даём конкретные решения</div>
+                <div class="audit-list__text">С примерами, референсами и приоритизацией</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="audit-body__bottom">
+          <a class="audit-btn" href="/audits">
+            <span class="audit-btn__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M9 7l10 5-10 5V7z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            Ещё примеры аудитов
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="audit-cta">
+      <h3 class="audit-cta__title">Хотите аудит для своего проекта?</h3>
+      <p class="audit-cta__subtitle">
+        Заполните форму — ответим в течение 2 дней
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Lead form block -->
+  <section class="submit">
+    <div class="container">
+    <div class="submit-card">
+      <header class="submit-head">
+        <h2 class="submit-title">Отправьте проект на разбор</h2>
+        <p class="submit-subtitle">
+          Пришлите ссылку на сайт, лендинг или презентацию — разберём и дадим
+          конкретные рекомендации. Ответ придёт в видео-формате, как в примере выше.
+        </p>
+      </header>
+
+      <form class="submit-form" action="/audits" method="post">
+        <!-- в Rails заменишь на form_with -->
+        <input
+          type="text"
+          name="audit[name]"
+          class="submit-input"
+          placeholder="Ваше имя"
+        >
+
+        <input
+          type="email"
+          name="audit[email]"
+          class="submit-input"
+          placeholder="Email для связи"
+        >
+
+        <input
+          type="url"
+          name="audit[url]"
+          class="submit-input"
+          placeholder="Ссылка на сайт / презентацию / материал"
+        >
+
+        <textarea
+          name="audit[question]"
+          class="submit-textarea"
+          placeholder="Что именно вас беспокоит? Какие вопросы хотите решить?"
+        ></textarea>
+
+        <button type="submit" class="submit-button">
+          <span class="submit-button__icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M7 10l5-5 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          Отправить на разбор
+        </button>
+      </form>
+
+      <div class="submit-foot">
+        Ответим в течение 2–3 рабочих дней
+      </div>
+    </div>
+    </div>
   </section>
 
-  <section class="mt-20 max-w-5xl">
-    <h2 class="text-4xl font-bold mb-12">
-      Мы объясняем,<br />как работает дизайн
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-      <div class="bg-orange-400 text-white p-6 rounded-lg">
-        Реальные истории брендов, которые выросли после редизайна
-      </div>
-      <div class="bg-green-400 text-white p-6 rounded-lg">
-        Почему одно решение работает, а другое нет
-      </div>
-      <div class="bg-blue-400 text-white p-6 rounded-lg">
-        Короткие заметки и тренды в визуальном мышлении
-      </div>
-      <div class="bg-pink-400 text-white p-6 rounded-lg">
-        И немного сплетен))
+
+  <!-- Latest articles -->
+  <section class="latest" id="articles">
+    <div class="container latest__inner">
+      <header class="latest-head">
+        <div class="latest-head__left">
+          <h2 class="latest-head__title">Последние статьи</h2>
+          <p class="latest-head__subtitle">Критический взгляд на дизайн и смысл</p>
+        </div>
+
+        <a class="latest-head__btn" href="/articles">
+          Все статьи <span class="latest-head__btn-icon" aria-hidden="true">›</span>
+        </a>
+      </header>
+
+      <div class="latest-list">
+        <!-- Card 1 -->
+        <article class="post-card">
+          <a class="post-card__cover post-card__cover--red" href="/articles/1" aria-label="Открыть статью">
+            <span class="post-card__cover-icon" aria-hidden="true">
+              <svg width="46" height="46" viewBox="0 0 24 24" fill="none">
+                <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M14 3v6h6" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 12h8M8 15h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </a>
+
+          <div class="post-card__body">
+            <div class="post-card__meta">
+              <span class="post-card__tag">Критика</span>
+              <span class="post-card__time">7 мин</span>
+            </div>
+
+            <h3 class="post-card__title">
+              <a href="/articles/1">Labubu и сумка в сумке: когда дизайн теряет смысл</a>
+            </h3>
+
+            <p class="post-card__text">
+              Разбираем феномены модных трендов, которые выглядят круто, но не несут никакой функциональной ценности.
+              Почему бренды делают странные вещи и как отличить смысл от хайпа.
+            </p>
+
+            <div class="post-card__bottom">
+              <div class="post-card__stats">
+                <span class="stat">
+                  <span class="stat__icon" aria-hidden="true">👁️</span>
+                  12 340
+                </span>
+                <span class="stat">
+                  <span class="stat__icon" aria-hidden="true">♡</span>
+                  892
+                </span>
+              </div>
+
+              <div class="post-card__date">15 декабря 2025</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="post-card">
+          <a class="post-card__cover post-card__cover--blue" href="/articles/2" aria-label="Открыть статью">
+            <span class="post-card__cover-icon" aria-hidden="true">
+              <svg width="46" height="46" viewBox="0 0 24 24" fill="none">
+                <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M14 3v6h6" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 12h8M8 15h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </a>
+
+          <div class="post-card__body">
+            <div class="post-card__meta">
+              <span class="post-card__tag">Аналитика</span>
+              <span class="post-card__time">12 мин</span>
+            </div>
+
+            <h3 class="post-card__title">
+              <a href="/articles/2">Почему 80% B2B лендингов не работают: разбор без прикрас</a>
+            </h3>
+
+            <p class="post-card__text">
+              Проанализировали 150 корпоративных сайтов. 80% из них — красивая обёртка без содержания.
+              Показываем, где прячется настоящая проблема и как её решить.
+            </p>
+
+            <div class="post-card__bottom">
+              <div class="post-card__stats">
+                <span class="stat">
+                  <span class="stat__icon" aria-hidden="true">👁️</span>
+                  18 923
+                </span>
+                <span class="stat">
+                  <span class="stat__icon" aria-hidden="true">♡</span>
+                  1456
+                </span>
+              </div>
+
+              <div class="post-card__date">10 декабря 2025</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="post-card">
+          <a class="post-card__cover post-card__cover--violet" href="/articles/3" aria-label="Открыть статью">
+            <span class="post-card__cover-icon" aria-hidden="true">
+              <svg width="46" height="46" viewBox="0 0 24 24" fill="none">
+                <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M14 3v6h6" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 12h8M8 15h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </a>
+
+          <div class="post-card__body">
+            <div class="post-card__meta">
+              <span class="post-card__tag">Гайд</span>
+              <span class="post-card__time">8 мин</span>
+            </div>
+
+            <h3 class="post-card__title">
+              <a href="/articles/3">Словарь для заказчика: говорим с дизайнерами на одном языке</a>
+            </h3>
+
+            <p class="post-card__text">
+              20 терминов, которые помогут вам не теряться в переговорах и контролировать процесс.
+              Перестаньте кивать, делая вид, что понимаете.
+            </p>
+
+            <div class="post-card__bottom">
+              <div class="post-card__stats">
+                <span class="stat">
+                  <span class="stat__icon" aria-hidden="true">👁️</span>
+                  9 834
+                </span>
+                <span class="stat">
+                  <span class="stat__icon" aria-hidden="true">♡</span>
+                  623
+                </span>
+              </div>
+
+              <div class="post-card__date">5 декабря 2025</div>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="mt-20 max-w-4xl text-left">
-    <h2 class="text-4xl font-bold mb-6">Подписка, которая имеет смысл</h2>
-    <form class="flex space-x-4">
-      <input type="email" placeholder="Ваша почта"
-             class="flex-1 border px-4 py-2 rounded-full" />
-      <button type="submit"
-              class="bg-teal-400 text-white px-6 py-2 rounded-full">
-        Подписаться на обновления
-      </button>
-    </form>
+
+  <!-- Cases -->
+  <section class="cases" id="cases">
+    <div class="container cases__inner">
+      <header class="cases-head">
+        <div class="cases-head__left">
+          <h2 class="cases-head__title">Кейсы: смысл, а не красота</h2>
+          <p class="cases-head__subtitle">Реальные проекты с метриками и обоснованиями</p>
+        </div>
+
+        <a class="cases-head__btn" href="/cases">
+          Все кейсы <span class="cases-head__btn-icon" aria-hidden="true">›</span>
+        </a>
+      </header>
+
+      <div class="cases-list">
+        <!-- Case 1 -->
+        <article class="case-card">
+          <a class="case-card__cover case-card__cover--blue" href="/cases/1" aria-label="Открыть кейс">
+            <span class="case-card__cover-icon" aria-hidden="true">
+              <svg width="52" height="52" viewBox="0 0 24 24" fill="none">
+                <path d="M4 19V5" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M10 19V9" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M16 19V3" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M3 19h18" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </span>
+          </a>
+
+          <div class="case-card__body">
+            <div class="case-card__kpi">+43% конверсия</div>
+
+            <h3 class="case-card__title">
+              <a href="/cases/1">Редизайн B2B SaaS: +43% конверсии через смысл, а не красоту</a>
+            </h3>
+
+            <p class="case-card__text">
+              Заказчик хотел “современный дизайн”. Мы спросили “зачем?” и нашли 3 реальные проблемы, которые убивали конверсию.
+              Решили их — конверсия выросла на 43%.
+            </p>
+
+            <div class="case-card__tags">
+              <span class="chip">b2b</span>
+              <span class="chip">конверсия</span>
+              <span class="chip">смысл</span>
+            </div>
+
+            <div class="case-card__bottom">
+              <div class="case-card__stats">
+                <span class="stat stat--muted">
+                  <span class="stat__icon" aria-hidden="true">👁️</span>
+                  15 234
+                </span>
+                <span class="stat stat--muted">
+                  <span class="stat__icon" aria-hidden="true">♡</span>
+                  1089
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 2 -->
+        <article class="case-card">
+          <a class="case-card__cover case-card__cover--green" href="/cases/2" aria-label="Открыть кейс">
+            <span class="case-card__cover-icon" aria-hidden="true">
+              <svg width="52" height="52" viewBox="0 0 24 24" fill="none">
+                <path d="M4 19V5" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M10 19V9" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M16 19V3" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M3 19h18" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </span>
+          </a>
+
+          <div class="case-card__body">
+            <div class="case-card__kpi">+NaN% конверсия</div>
+
+            <h3 class="case-card__title">
+              <a href="/cases/2">Презентация для инвесторов: от красивых слайдов к ясности</a>
+            </h3>
+
+            <p class="case-card__text">
+              Основатели гордились своей презентацией — эффектные переходы, стильные шрифты. Инвесторы не понимали бизнес-модель.
+              Убрали декор, увеличили цифры — закрыли раунд.
+            </p>
+
+            <div class="case-card__tags">
+              <span class="chip">презентация</span>
+              <span class="chip">инвесторы</span>
+              <span class="chip">ясность</span>
+            </div>
+
+            <div class="case-card__bottom">
+              <div class="case-card__stats">
+                <span class="stat stat--muted">
+                  <span class="stat__icon" aria-hidden="true">👁️</span>
+                  11 892
+                </span>
+                <span class="stat stat--muted">
+                  <span class="stat__icon" aria-hidden="true">♡</span>
+                  834
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 3 -->
+        <article class="case-card">
+          <a class="case-card__cover case-card__cover--violet" href="/cases/3" aria-label="Открыть кейс">
+            <span class="case-card__cover-icon" aria-hidden="true">
+              <svg width="52" height="52" viewBox="0 0 24 24" fill="none">
+                <path d="M4 19V5" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M10 19V9" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M16 19V3" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M3 19h18" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </span>
+          </a>
+
+          <div class="case-card__body">
+            <div class="case-card__kpi">+NaN% конверсия</div>
+
+            <h3 class="case-card__title">
+              <a href="/cases/3">Мобильное приложение fintech: упрощение ради функции</a>
+            </h3>
+
+            <p class="case-card__text">
+              Красивый интерфейс с градиентами и анимациями. Пользователи удаляли приложение после первой сессии.
+              Упростили до предела — retention вырос на 34%.
+            </p>
+
+            <div class="case-card__tags">
+              <span class="chip">mobile</span>
+              <span class="chip">fintech</span>
+              <span class="chip">упрощение</span>
+            </div>
+
+            <div class="case-card__bottom">
+              <div class="case-card__stats">
+                <span class="stat stat--muted">
+                  <span class="stat__icon" aria-hidden="true">👁️</span>
+                  10 834
+                </span>
+                <span class="stat stat--muted">
+                  <span class="stat__icon" aria-hidden="true">♡</span>
+                  712
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <footer class="bg-black text-white mt-20 w-full py-12 px-6">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between">
-      <div>
-        <h3 class="text-2xl font-bold mb-4">
-          Будьте первыми, кто узнаёт, как визуальные решения работают в бизнесе
-        </h3>
+
+  <!-- Video list -->
+  <section class="videos" id="videos">
+    <div class="container videos__inner">
+      <header class="videos-head">
+        <h2 class="videos-head__title">Смотрите, как мыслят дизайнеры</h2>
+        <p class="videos-head__subtitle">Записи процесса работы и live-соревнования</p>
+      </header>
+
+      <div class="videos-list">
+        <!-- video 1 -->
+        <article class="video-card">
+          <a class="video-card__cover video-card__cover--navy" href="/videos/1" aria-label="Открыть видео">
+            <span class="video-card__play" aria-hidden="true">
+              <svg width="100" height="100" viewBox="0 0 64 64" fill="none">
+                <path d="M26 20l20 12-20 12V20z" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="video-card__duration">2:34:15</span>
+          </a>
+
+          <div class="video-card__body">
+            <h3 class="video-card__title">
+              <a href="/videos/1">Редизайн навигации e-commerce: логика вместо интуиции</a>
+            </h3>
+
+            <div class="video-card__meta">
+              <span class="meta">
+                <span class="meta__icon" aria-hidden="true">👤</span>
+                Анна Петрова
+              </span>
+              <span class="meta">
+                <span class="meta__icon" aria-hidden="true">👁️</span>
+                5 431
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- video 2 -->
+        <article class="video-card">
+          <a class="video-card__cover video-card__cover--blue" href="/videos/2" aria-label="Открыть видео">
+            <span class="video-card__play" aria-hidden="true">
+              <svg width="100" height="100" viewBox="0 0 64 64" fill="none">
+                <path d="M26 20l20 12-20 12V20z" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="video-card__duration">8:12:30</span>
+          </a>
+
+          <div class="video-card__body">
+            <h3 class="video-card__title">
+              <a href="/videos/2">Дизайн-система с нуля: функция, а не красота</a>
+            </h3>
+
+            <div class="video-card__meta">
+              <span class="meta">
+                <span class="meta__icon" aria-hidden="true">👤</span>
+                Дмитрий Соколов
+              </span>
+              <span class="meta">
+                <span class="meta__icon" aria-hidden="true">👁️</span>
+                7 892
+              </span>
+            </div>
+          </div>
+        </article>
       </div>
-      <div class="flex space-x-6 mt-6 md:mt-0">
-        <a href="#">Behance</a>
-        <a href="#">YouTube</a>
-        <a href="#">VK</a>
-        <a href="#">Telegram</a>
+
+      <div class="videos-bottom">
+        <a class="videos-btn" href="/videos">
+          Смотреть всё <span class="videos-btn__icon" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Calculator -->
+  <section class="calc" id="calc">
+    <div class="container calc__inner">
+      <div class="calc-card">
+        <header class="calc-head">
+          <h2 class="calc-title">Интересно, сколько стоит проект?</h2>
+          <p class="calc-subtitle">
+            Калькулятор даёт примерную рыночную цену. Это не коммерческое предложение<br>
+            — просто ориентир для бюджета.
+          </p>
+        </header>
+
+        <form class="calc-form" action="/quotes" method="post">
+          <div class="calc-field">
+            <label class="calc-label" for="calc_project_type">Тип проекта</label>
+            <select id="calc_project_type" name="quote[project_type]" class="calc-select">
+              <option value="" selected disabled>Выберите тип проекта</option>
+              <option>Сайт</option>
+              <option>Лендинг</option>
+              <option>Интерфейс</option>
+              <option>Брендинг</option>
+            </select>
+          </div>
+
+          <div class="calc-field">
+            <label class="calc-label" for="calc_scope">Объём работы</label>
+            <select id="calc_scope" name="quote[scope]" class="calc-select">
+              <option value="" selected disabled>Выберите объём</option>
+              <option>Минимальный</option>
+              <option>Средний</option>
+              <option>Большой</option>
+            </select>
+          </div>
+
+          <fieldset class="calc-fieldset">
+            <legend class="calc-legend">Дополнительные функции</legend>
+
+            <label class="calc-check">
+              <input class="calc-check__input" type="checkbox" name="quote[features][]" value="adaptive">
+              <span class="calc-check__box" aria-hidden="true"></span>
+              <span class="calc-check__text">Адаптивная вёрстка</span>
+            </label>
+
+            <label class="calc-check">
+              <input class="calc-check__input" type="checkbox" name="quote[features][]" value="animations">
+              <span class="calc-check__box" aria-hidden="true"></span>
+              <span class="calc-check__text">Анимации и микроинтеракции</span>
+            </label>
+
+            <label class="calc-check">
+              <input class="calc-check__input" type="checkbox" name="quote[features][]" value="prototype">
+              <span class="calc-check__box" aria-hidden="true"></span>
+              <span class="calc-check__text">Интерактивный прототип</span>
+            </label>
+
+            <label class="calc-check">
+              <input class="calc-check__input" type="checkbox" name="quote[features][]" value="illustrations">
+              <span class="calc-check__box" aria-hidden="true"></span>
+              <span class="calc-check__text">Кастомные иллюстрации</span>
+            </label>
+
+            <label class="calc-check">
+              <input class="calc-check__input" type="checkbox" name="quote[features][]" value="copywriting">
+              <span class="calc-check__box" aria-hidden="true"></span>
+              <span class="calc-check__text">Копирайтинг</span>
+            </label>
+          </fieldset>
+
+          <div class="calc-field">
+            <label class="calc-label" for="calc_timeline">Срочность</label>
+            <select id="calc_timeline" name="quote[timeline]" class="calc-select">
+              <option value="" selected disabled>Выберите срок</option>
+              <option>Стандартный</option>
+              <option>Ускоренный</option>
+              <option>Суперсрочно</option>
+            </select>
+          </div>
+
+          <button class="calc-btn" type="submit">
+            <span class="calc-btn__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M7 4h10v16H7V4z" stroke="currentColor" stroke-width="2" opacity=".9"/>
+                <path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            Рассчитать стоимость
+          </button>
+
+          <p class="calc-note">
+            Это примерная оценка. Для точного расчёта свяжитесь с нами.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Subscribe -->
+  <section class="subscribe-block" id="subscribe">
+    <div class="container">
+      <div class="subscribe-card">
+        <header class="subscribe-head">
+          <h2 class="subscribe-title">Подпишитесь на обновления</h2>
+          <p class="subscribe-subtitle">Новые статьи, кейсы и инструменты — раз в неделю</p>
+        </header>
+
+        <form class="subscribe-form" action="/subscriptions" method="post">
+          <input
+            class="subscribe-input"
+            type="text"
+            name="subscription[name]"
+            placeholder="Ваше имя"
+          >
+
+          <input
+            class="subscribe-input"
+            type="email"
+            name="subscription[email]"
+            placeholder="Ваш email"
+          >
+
+          <button class="subscribe-btn" type="submit">
+            <span class="subscribe-btn__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M4 6h16v12H4V6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            Подписаться
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="tg" id="telegram">
+    <div class="container tg__inner">
+      <a class="tg-banner tg-banner--blue" href="https://t.me/" target="_blank" rel="noopener noreferrer">
+        <div class="tg-banner__content">
+          <h3 class="tg-banner__title">Telegram мини-апп для дизайнеров</h3>
+          <p class="tg-banner__text">
+            Загружайте работы — получайте фидбек от комьюнити. Без снобизма, с конкретикой.
+          </p>
+
+          <span class="tg-banner__btn">
+            Открыть апп
+            <span class="tg-banner__btn-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M14 5h5v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M10 14l9-9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M19 14v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </span>
+        </div>
+      </a>
+
+      <a class="tg-banner tg-banner--violet" href="https://t.me/" target="_blank" rel="noopener noreferrer">
+        <div class="tg-banner__content">
+          <h3 class="tg-banner__title">Telegram-канал для заказчиков</h3>
+          <p class="tg-banner__text">
+            Гайды, чек-листы и инструменты для работы с дизайнерами
+          </p>
+
+          <span class="tg-banner__btn">
+            Подписаться
+            <span class="tg-banner__btn-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M14 5h5v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M10 14l9-9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M19 14v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="brand brand--muted">
+          <span class="brand__logo" aria-hidden="true"></span>
+          <span class="brand__name">SMYSL</span>
+        </div>
+        <div class="footer__copy">© <span><%= Time.current.year %></span> SMYSL</div>
+      </div>
+
+      <div class="footer__right">
+        <a class="footer__link" href="/privacy">Политика</a>
+        <a class="footer__link" href="/terms">Условия</a>
+        <a class="footer__link" href="/contacts">Контакты</a>
       </div>
     </div>
   </footer>
