@@ -1,17 +1,65 @@
+<header class="site-header">
+      <div class="container header__inner">
+        <a class="logo" href="/">SMYSL</a>
+
+        <nav class="topnav" aria-label="Основная навигация">
+          <a class="topnav__link" href="/">Главная</a>
+          <a class="topnav__link" href="/articles">Статьи</a>
+          <a class="topnav__link" href="/cases">Кейсы</a>
+          <a class="topnav__link" href="/process">Процесс и батлы</a>
+          <a class="topnav__link" href="/about">О нас</a>
+        </nav>
+
+        <div class="header-actions">
+          <% if user_signed_in? %>
+            <span class="header-user">
+              <%= current_user.email %>
+            </span>
+
+            <%= button_to "Выйти",
+                  destroy_user_session_path,
+                  method: :delete,
+                  class: "header-btn header-btn--ghost" %>
+          <% else %>
+            <%= link_to "Войти",
+                  new_user_session_path,
+                  class: "header-btn" %>
+          <% end %>
+        </div>
+      </div>
+</header>
+
 <main>
     <header class="site-header">
-    <div class="container header__inner">
-      <a class="logo" href="/">SMYSL</a>
+      <div class="container header__inner">
+        <a class="logo" href="/">SMYSL</a>
 
-      <nav class="topnav" aria-label="Основная навигация">
-        <a class="topnav__link" href="/">Главная</a>
-        <a class="topnav__link" href="/articles">Статьи</a>
-        <a class="topnav__link topnav__link--active" href="/cases">Кейсы</a>
-        <a class="topnav__link" href="/process">Процесс и батлы</a>
-        <a class="topnav__link" href="/about">О нас</a>
-      </nav>
-    </div>
-  </header>
+        <nav class="topnav" aria-label="Основная навигация">
+          <a class="topnav__link" href="/">Главная</a>
+          <a class="topnav__link" href="/articles">Статьи</a>
+          <a class="topnav__link" href="/cases">Кейсы</a>
+          <a class="topnav__link" href="/process">Процесс и батлы</a>
+          <a class="topnav__link" href="/about">О нас</a>
+        </nav>
+
+        <div class="header-actions">
+          <% if user_signed_in? %>
+            <span class="header-user">
+              <%= current_user.email %>
+            </span>
+
+            <%= button_to "Выйти",
+                  destroy_user_session_path,
+                  method: :delete,
+                  class: "header-btn header-btn--ghost" %>
+          <% else %>
+            <%= link_to "Войти",
+                  new_user_session_path,
+                  class: "header-btn" %>
+          <% end %>
+        </div>
+      </div>
+    </header>
 
   <section class="cases" id="cases">
     <div class="container cases__inner">
@@ -21,9 +69,6 @@
           <p class="cases-head__subtitle">Реальные проекты с метриками и обоснованиями</p>
         </div>
 
-        <a class="cases-head__btn" href="/cases">
-          Все кейсы <span class="cases-head__btn-icon" aria-hidden="true">›</span>
-        </a>
       </header>
 
       <div class="cases-list">
@@ -120,6 +165,144 @@
         </article>
 
         <!-- Case 3 -->
+        <article class="case-card">
+          <a class="case-card__cover case-card__cover--violet" href="/cases/3" aria-label="Открыть кейс">
+            <span class="case-card__cover-icon" aria-hidden="true">
+              <svg width="52" height="52" viewBox="0 0 24 24" fill="none">
+                <path d="M4 19V5" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M10 19V9" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M16 19V3" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M3 19h18" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </span>
+          </a>
+
+          <div class="case-card__body">
+            <div class="case-card__kpi">+NaN% конверсия</div>
+
+            <h3 class="case-card__title">
+              <a href="/cases/3">Мобильное приложение fintech: упрощение ради функции</a>
+            </h3>
+
+            <p class="case-card__text">
+              Красивый интерфейс с градиентами и анимациями. Пользователи удаляли приложение после первой сессии.
+              Упростили до предела — retention вырос на 34%.
+            </p>
+
+            <div class="case-card__tags">
+              <span class="chip">mobile</span>
+              <span class="chip">fintech</span>
+              <span class="chip">упрощение</span>
+            </div>
+
+            <div class="case-card__bottom">
+              <div class="case-card__stats">
+                <span class="stat stat--muted">
+                  <span class="stat__icon" aria-hidden="true">👁️</span>
+                  10 834
+                </span>
+                <span class="stat stat--muted">
+                  <span class="stat__icon" aria-hidden="true">♡</span>
+                  712
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 4 -->
+        <article class="case-card">
+          <a class="case-card__cover case-card__cover--blue" href="/cases/1" aria-label="Открыть кейс">
+            <span class="case-card__cover-icon" aria-hidden="true">
+              <svg width="52" height="52" viewBox="0 0 24 24" fill="none">
+                <path d="M4 19V5" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M10 19V9" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M16 19V3" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M3 19h18" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </span>
+          </a>
+
+          <div class="case-card__body">
+            <div class="case-card__kpi">+43% конверсия</div>
+
+            <h3 class="case-card__title">
+              <a href="/cases/1">Редизайн B2B SaaS: +43% конверсии через смысл, а не красоту</a>
+            </h3>
+
+            <p class="case-card__text">
+              Заказчик хотел “современный дизайн”. Мы спросили “зачем?” и нашли 3 реальные проблемы, которые убивали конверсию.
+              Решили их — конверсия выросла на 43%.
+            </p>
+
+            <div class="case-card__tags">
+              <span class="chip">b2b</span>
+              <span class="chip">конверсия</span>
+              <span class="chip">смысл</span>
+            </div>
+
+            <div class="case-card__bottom">
+              <div class="case-card__stats">
+                <span class="stat stat--muted">
+                  <span class="stat__icon" aria-hidden="true">👁️</span>
+                  15 234
+                </span>
+                <span class="stat stat--muted">
+                  <span class="stat__icon" aria-hidden="true">♡</span>
+                  1089
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 5 -->
+        <article class="case-card">
+          <a class="case-card__cover case-card__cover--green" href="/cases/2" aria-label="Открыть кейс">
+            <span class="case-card__cover-icon" aria-hidden="true">
+              <svg width="52" height="52" viewBox="0 0 24 24" fill="none">
+                <path d="M4 19V5" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M10 19V9" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M16 19V3" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M3 19h18" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </span>
+          </a>
+
+          <div class="case-card__body">
+            <div class="case-card__kpi">+NaN% конверсия</div>
+
+            <h3 class="case-card__title">
+              <a href="/cases/2">Презентация для инвесторов: от красивых слайдов к ясности</a>
+            </h3>
+
+            <p class="case-card__text">
+              Основатели гордились своей презентацией — эффектные переходы, стильные шрифты. Инвесторы не понимали бизнес-модель.
+              Убрали декор, увеличили цифры — закрыли раунд.
+            </p>
+
+            <div class="case-card__tags">
+              <span class="chip">презентация</span>
+              <span class="chip">инвесторы</span>
+              <span class="chip">ясность</span>
+            </div>
+
+            <div class="case-card__bottom">
+              <div class="case-card__stats">
+                <span class="stat stat--muted">
+                  <span class="stat__icon" aria-hidden="true">👁️</span>
+                  11 892
+                </span>
+                <span class="stat stat--muted">
+                  <span class="stat__icon" aria-hidden="true">♡</span>
+                  834
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 6 -->
         <article class="case-card">
           <a class="case-card__cover case-card__cover--violet" href="/cases/3" aria-label="Открыть кейс">
             <span class="case-card__cover-icon" aria-hidden="true">

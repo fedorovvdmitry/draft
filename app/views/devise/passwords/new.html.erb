@@ -1,16 +1,70 @@
-<h2>Forgot your password?</h2>
+<header class="site-header">
+      <div class="container header__inner">
+        <a class="logo" href="/">SMYSL</a>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+        <nav class="topnav" aria-label="Основная навигация">
+          <a class="topnav__link" href="/">Главная</a>
+          <a class="topnav__link" href="/articles">Статьи</a>
+          <a class="topnav__link" href="/cases">Кейсы</a>
+          <a class="topnav__link" href="/process">Процесс и батлы</a>
+          <a class="topnav__link" href="/about">О нас</a>
+        </nav>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <div class="header-actions">
+          <% if user_signed_in? %>
+            <span class="header-user">
+              <%= current_user.email %>
+            </span>
+
+            <%= button_to "Выйти",
+                  destroy_user_session_path,
+                  method: :delete,
+                  class: "header-btn header-btn--ghost" %>
+          <% else %>
+            <%= link_to "Войти",
+                  new_user_session_path,
+                  class: "header-btn" %>
+          <% end %>
+        </div>
+      </div>
+</header>
+
+<main class="auth">
+  <div class="container auth__inner">
+
+    <div class="auth-card">
+      <header class="auth-head">
+        <h1 class="auth-title">Восстановление пароля</h1>
+        <p class="auth-subtitle">
+          Укажите email, и мы пришлём ссылку для сброса пароля.
+        </p>
+      </header>
+
+      <%= form_for(
+            resource,
+            as: resource_name,
+            url: password_path(resource_name),
+            html: { method: :post, class: "auth-form" }
+          ) do |f| %>
+
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="auth-field">
+          <%= f.label :email, "Email", class: "auth-label" %>
+          <%= f.email_field :email,
+                autofocus: true,
+                autocomplete: "email",
+                class: "auth-input",
+                placeholder: "Ваш email" %>
+        </div>
+
+        <%= f.submit "Отправить ссылку для сброса", class: "auth-btn" %>
+
+        <div class="auth-links">
+          <%= link_to "Вернуться ко входу", new_user_session_path, class: "auth-links__link" %>
+        </div>
+      <% end %>
+    </div>
+
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</main>
