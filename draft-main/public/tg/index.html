@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Telegram Mini App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="/tg/styles.css" />
+  </head>
+  
+  <body>
+    <div class="app">
+        <section class="hero">
+        <span class="badge">ДИЗАЙН × БИЗНЕС</span>
+        <h1>Говори на языке заказчика</h1>
+        <p>Переводим визуал в бизнес-метрики</p>
+        </section>
+
+        <section class="cta">
+        <h2>Работаешь с визуалом через логику бизнеса? Мы ищем таких</h2>
+        <button class="btn-primary" id="leadBtn" type="button">Оставить заявку</button>
+        </section>
+
+        <nav class="tabs" id="tabs">
+        <button class="tab active" type="button" data-tab="moodboard"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+<path d="M8.39059 1.72398C8.1406 1.47391 7.80151 1.33339 7.44792 1.33331H2.66659C2.31296 1.33331 1.97382 1.47379 1.72378 1.72384C1.47373 1.97389 1.33325 2.31302 1.33325 2.66665V7.44798C1.33333 7.80157 1.47385 8.14066 1.72392 8.39065L7.52659 14.1933C7.82959 14.4944 8.23942 14.6634 8.66659 14.6634C9.09375 14.6634 9.50358 14.4944 9.80659 14.1933L14.1933 9.80665C14.4943 9.50364 14.6633 9.09382 14.6633 8.66665C14.6633 8.23948 14.4943 7.82966 14.1933 7.52665L8.39059 1.72398Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.00008 5.33335C5.18418 5.33335 5.33341 5.18412 5.33341 5.00002C5.33341 4.81593 5.18418 4.66669 5.00008 4.66669C4.81599 4.66669 4.66675 4.81593 4.66675 5.00002C4.66675 5.18412 4.81599 5.33335 5.00008 5.33335Z" fill="white" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            Мудборд</button>
+        <button class="tab" type="button" data-tab="glossary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+<path d="M1.33325 2H5.33325C6.0405 2 6.71877 2.28095 7.21887 2.78105C7.71897 3.28115 7.99992 3.95942 7.99992 4.66667V14C7.99992 13.4696 7.78921 12.9609 7.41413 12.5858C7.03906 12.2107 6.53035 12 5.99992 12H1.33325V2Z" stroke="#6B7280" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.6667 2H10.6667C9.95942 2 9.28115 2.28095 8.78105 2.78105C8.28095 3.28115 8 3.95942 8 4.66667V14C8 13.4696 8.21071 12.9609 8.58579 12.5858C8.96086 12.2107 9.46957 12 10 12H14.6667V2Z" stroke="#6B7280" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            Словарь</button>
+        <button class="tab" type="button" data-tab="orders">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+<path d="M12.6667 8.66669C12.6667 9.02031 12.5263 9.35945 12.2762 9.6095C12.0262 9.85954 11.687 10 11.3334 10H3.33341L0.666748 12.6667V2.00002C0.666748 1.6464 0.807224 1.30726 1.05727 1.05721C1.30732 0.807163 1.64646 0.666687 2.00008 0.666687H11.3334C11.687 0.666687 12.0262 0.807163 12.2762 1.05721C12.5263 1.30726 12.6667 1.6464 12.6667 2.00002V8.66669Z" stroke="#6B7280" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            Стол заказов</button>
+        </nav>
+
+        <div class="section-head">
+            <h2 class="section-head__title">Подборка дизайнов</h2>
+
+            <button class="section-head__action" type="button">
+                <svg
+                class="section-head__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+                aria-hidden="true"
+                >
+                <path
+                    d="M12.2499 0.583313H0.583252L5.24992 6.10165V9.91665L7.58325 11.0833V6.10165L12.2499 0.583313Z"
+                    stroke="currentColor"
+                    stroke-width="1.16667"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                </svg>
+                <span class="section-head__label">Фильтр</span>
+            </button>
+        </div>
+
+        
+        <section class="grid" id="grid"></section>
+        <section class="mdetail is-hidden" id="moodDetail"></section>
+
+        <section class="glist is-hidden" id="glossary">
+            <section class="gdetail is-hidden" id="glossaryDetail"></section>
+        </section>
+
+        <section class="olist is-hidden" id="orders"></section>
+    </div>
+<div class="debug" id="status"></div>
+
+  <script src="/tg/app.js"></script>
+</body>
+
+
+</html>

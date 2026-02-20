@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+# Script to setup JWT authentication
+
+require 'securerandom'
+require 'fileutils'
+
+puts "🚀 Настройка JWT аутентификации для медиасервиса 'Смысл'"
+puts "=" * 60
+
+# Генерация JWT секретного ключа
+puts "\n1. Генерация JWT секретного ключа..."
+jwt_key = SecureRandom.hex(64)
+puts "✅ JWT ключ сгенерирован: #{jwt_key[0..20]}..."
+
+# Сохранение ключа
+puts "\n2. Сохранение ключа..."
+puts "⚠️  ВАЖНО: Сохраните этот ключ в безопасном месте!"
+puts "\nДобавьте следующую строку в ваш config/credentials.yml.enc:"
+puts "\njwt_signing_key: #{jwt_key}"
+puts "\nКоманда для редактирования credentials:"
+puts "EDITOR=\"code --wait\" bin/rails credentials:edit"
+
+# Создание файла с ключом для локальной разработки
+puts "\n3. Создание файла .env для локальной разработки..."
+File.open('.env', 'a') do |f|
+  f.puts "\n# JWT Secret Key (НЕ КОММИТИТЬ В GIT!)"
+  f.puts "JWT_SIGNING_KEY=#{jwt_key}"
+end
+
+# Обновление .gitignore
+puts "\n4. Обновление .gitignore..."
+gitignore_content = File.read('.gitignore') rescue ''
+unless gitignore_content.include?('.env')
+  File.open('.gitignore', 'a') do |f|
+    f.puts "\n# Environment variables"
+    f.puts ".env"
+  end
+  puts "✅ .env добавлен в .gitignore"
+end
+
+puts "\n" + "=" * 60
+puts "✨ Настройка завершена!"
+puts "=" * 60
+
+puts "\nСледующие шаги:"
+puts "1. Запустите: bundle install"
+puts "2. Запустите: rails db:migrate"
+puts "3. Добавьте jwt_signing_key в credentials (см. выше)"
+puts "4. Запустите сервер: rails server"
+puts "\n📖 Документация: см. QUICKSTART.md и JWT_API_SETUP.md"

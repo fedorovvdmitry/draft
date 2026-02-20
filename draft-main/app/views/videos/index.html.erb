@@ -1,0 +1,108 @@
+<main>
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="/">SMYSL</a>
+
+      <nav class="topnav" aria-label="Основная навигация">
+        <a class="topnav__link" href="/">Главная</a>
+        <a class="topnav__link" href="/articles">Статьи</a>
+        <a class="topnav__link" href="/cases">Кейсы</a>
+        <a class="topnav__link" href="/process">Процесс и батлы</a>
+        <a class="topnav__link" href="/about">О нас</a>
+      </nav>
+
+      <div class="header-actions">
+        <% if user_signed_in? %>
+          <span class="header-user">
+            <%= current_user.email %>
+          </span>
+
+          <%= button_to "Выйти",
+                destroy_user_session_path,
+                method: :delete,
+                class: "header-btn header-btn--ghost" %>
+        <% else %>
+          <%= link_to "Войти",
+                new_user_session_path,
+                class: "header-btn" %>
+        <% end %>
+      </div>
+    </div>
+  </header>
+
+  <section class="videos" id="videos">
+    <div class="container videos__inner">
+      <header class="videos-head">
+        <h2 class="videos-head__title">Смотрите, как мыслят дизайнеры</h2>
+        <p class="videos-head__subtitle">Записи процесса работы и live-соревнования</p>
+      </header>
+
+      <div class="videos-list">
+        <!-- video 1 -->
+        <article class="video-card">
+          <a class="video-card__cover video-card__cover--navy" href="/videos/1" aria-label="Открыть видео">
+            <span class="video-card__play" aria-hidden="true">
+              <svg width="100" height="100" viewBox="0 0 64 64" fill="none">
+                <path d="M26 20l20 12-20 12V20z" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="video-card__duration">2:34:15</span>
+          </a>
+
+          <div class="video-card__body">
+            <h3 class="video-card__title">
+              <a href="/videos/1">Редизайн навигации e-commerce: логика вместо интуиции</a>
+            </h3>
+
+            <div class="video-card__meta">
+              <span class="meta">
+                <span class="meta__icon" aria-hidden="true">👤</span>
+                Анна Петрова
+              </span>
+              <span class="meta">
+                <span class="meta__icon" aria-hidden="true">👁️</span>
+                5 431
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- video 2 -->
+        <article class="video-card">
+          <a class="video-card__cover video-card__cover--blue" href="/videos/2" aria-label="Открыть видео">
+            <span class="video-card__play" aria-hidden="true">
+              <svg width="100" height="100" viewBox="0 0 64 64" fill="none">
+                <path d="M26 20l20 12-20 12V20z" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="video-card__duration">8:12:30</span>
+          </a>
+
+          <div class="video-card__body">
+            <h3 class="video-card__title">
+              <a href="/videos/2">Дизайн-система с нуля: функция, а не красота</a>
+            </h3>
+
+            <div class="video-card__meta">
+              <span class="meta">
+                <span class="meta__icon" aria-hidden="true">👤</span>
+                Дмитрий Соколов
+              </span>
+              <span class="meta">
+                <span class="meta__icon" aria-hidden="true">👁️</span>
+                7 892
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="videos-bottom">
+        <a class="videos-btn" href="/videos">
+          Смотреть всё <span class="videos-btn__icon" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>

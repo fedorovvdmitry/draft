@@ -1,5 +1,4 @@
-<main>
-  <header class="site-header">
+<header class="site-header">
     <div class="container header__inner">
       <a class="logo" href="/">SMYSL</a>
 
@@ -10,10 +9,28 @@
         <a class="topnav__link" href="/process">Процесс и батлы</a>
         <a class="topnav__link topnav__link--active" href="/about">О нас</a>
       </nav>
-    </div>
-  </header>
 
-  <div class="container page__inner">
+      <div class="header-actions">
+        <% if user_signed_in? %>
+          <span class="header-user">
+            <%= current_user.email %>
+          </span>
+
+          <%= button_to "Выйти",
+                destroy_user_session_path,
+                method: :delete,
+                class: "header-btn header-btn--ghost" %>
+        <% else %>
+          <%= link_to "Войти",
+                new_user_session_path,
+                class: "header-btn" %>
+        <% end %>
+      </div>
+    </div>
+</header>
+
+<main>
+    <div class="container page__inner">
     <div class="page-head">
       <h1 class="page-title">О нас</h1>
     </div>
